@@ -425,6 +425,7 @@ h1 {
 
 .project-list {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   padding-bottom: 4.5rem;
 }
