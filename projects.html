@@ -171,7 +171,7 @@
           <div class="project-body" style="display: block;">
             <div class="project-media" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
   <div style="text-align:center;">
-    <img src="scatter-normal.png" 
+    <img src="Scatter.png" 
          alt="Relative Valuation Scatter Dashboard" 
          style="max-width: 520px; width: 100%; height: auto; border-radius: 12px;">
     <div class="media-caption" style="margin-top: 0.5rem; opacity: 0.8;">
@@ -180,7 +180,7 @@
   </div>
 
   <div style="text-align:center;">
-    <img src="scatter-ai.png" 
+    <img src="Scatter_AI.png" 
          alt="AI Enhanced Relative Valuation Scatter Dashboard" 
          style="max-width: 520px; width: 100%; height: auto; border-radius: 12px;">
     <div class="media-caption" style="margin-top: 0.5rem; opacity: 0.8;">
@@ -252,50 +252,62 @@
           </div>
         </article>
 
-        <article class="project-detail" id="screening-engine" style="margin-top: 3rem;">
+        <article class="project-detail" id="concall-summariser" style="max-width: 100%; padding: 2rem 2rem; margin-top: 3rem;">
           <div class="project-top">
-            <h2>Technical Screening Engine</h2>
-            <span class="tag">Automation</span>
+            <h2>AI-Powered Concall Summariser</h2>
+            <span class="tag">AI Research</span>
           </div>
-          <div class="project-body">
-            <div class="project-content">
+
+          <div class="project-body" style="display: block;">
+            <div class="project-media" style="text-align: center; margin-bottom: 2rem;">
+              <img src="concall.png" 
+                   alt="AI Powered Concall Summariser" 
+                   style="max-width: 100%; height: auto; border-radius: 12px;">
+              <div class="media-caption" style="margin-top: 0.75rem; opacity: 0.8;">
+                AI-assisted concall extraction and summarisation pipeline integrated with Excel and Streamlit.
+              </div>
+            </div>
+
+            <div class="project-content" style="width: 100%;">
               <p class="muted">
-                One-click refresh engine covering 1,800+ NSE stocks with
-                structured screening outputs.
+                An automated AI-driven pipeline designed to scrape, optimise, and summarise
+                earnings call transcripts across the NSE universe.
               </p>
+
               <h3>Overview</h3>
               <p>
-                Add your detailed explanation here. Mention the data sources,
-                the screening logic, and how it is used day to day.
+                This system scrapes earnings call transcripts directly from the Screener.in
+                website and processes them through a structured keyword-density engine
+                before generating AI summaries.
               </p>
-              <h3>What I built</h3>
+
+              <h3>Pipeline Architecture</h3>
               <ul>
-                <li>Power Query ingestion from multiple sources.</li>
-                <li>VBA automation for fast refresh and list generation.</li>
-                <li>Sector and industry filters for conviction lists.</li>
+                <li>Scrapes concall transcripts from Screener.in.</li>
+                <li>Applies high-density keyword extraction logic to capture relevant context windows around critical financial terms.</li>
+                <li>Optimises the AI input by extracting text segments before and after targeted keywords to reduce token load.</li>
+                <li>Feeds structured context into Ollama (currently using a cloud-based model; can be shifted to local models depending on system specifications).</li>
+                <li>Generates structured summaries across 1900+ stocks in approximately one hour.</li>
+                <li>One-click summary viewing directly from the Excel dashboard via an integrated Streamlit window.</li>
               </ul>
+
+              <h3>Impact</h3>
+              <p>
+                The concall summariser dramatically reduces manual transcript review time
+                while preserving analytical depth. By optimising context windows before
+                AI processing, the system improves efficiency, reduces cost, and enables
+                scalable coverage across the entire market universe.
+              </p>
+
               <div class="project-links">
                 <a href="#">Repo</a>
                 <a href="#">Docs</a>
               </div>
             </div>
-            <div class="project-media">
-              <div class="media-grid">
-                <div class="media-item">
-                  <div class="media-placeholder">Image / Sheet</div>
-                  <span class="media-caption">Caption for screen.</span>
-                </div>
-                <div class="media-item">
-                  <div class="media-placeholder">Image / Sheet</div>
-                  <span class="media-caption">Caption for screen.</span>
-                </div>
-              </div>
-            </div>
           </div>
         </article>
-      </section>
-    </main>
 
+      
     <footer class="footer" id="contact">
       <div class="container footer-inner">
         <div>
